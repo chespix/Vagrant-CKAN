@@ -22,6 +22,7 @@ Vagrant.configure(2) do |config|
     fi
     dpkg -i /vagrant/python-ckan_2.5-trusty_amd64.deb
     a2enmod wsgi
+    echo 'ServerName "localhost"' >> /etc/apache2/apache2.conf
     service apache2 restart
     apt-get install -y postgresql solr-jetty expect
     cp /vagrant/jetty /etc/default/jetty
