@@ -31,10 +31,10 @@ Vagrant.configure(2) do |config|
     ln -s /usr/bin/rotatelogs /usr/sbin/rotatelogs
     service jetty restart
     cp /vagrant/production.ini /etc/ckan/default/production.ini
-    -u postgres psql -c "CREATE USER ckan_default WITH PASSWORD 'Dh4rm4T3c';"
-    -u postgres psql -c "CREATE USER datastore_default WITH PASSWORD 'Dh4rm4T3c';"
-    -u postgres createdb -O ckan_default ckan_default -E utf-8
-    -u postgres createdb -O ckan_default datastore_default -E utf-8
+    sudo -u postgres psql -c "CREATE USER ckan_default WITH PASSWORD 'Dh4rm4T3c';"
+    sudo -u postgres psql -c "CREATE USER datastore_default WITH PASSWORD 'Dh4rm4T3c';"
+    sudo -u postgres createdb -O ckan_default ckan_default -E utf-8
+    sudo -u postgres createdb -O ckan_default datastore_default -E utf-8
     ckan db init
     ckan datastore set-permissions | -u postgres psql --set ON_ERROR_STOP=1
     mkdir -p /var/lib/ckan/default
