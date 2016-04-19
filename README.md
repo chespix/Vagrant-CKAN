@@ -1,7 +1,7 @@
 # CKAN demo by Dharmatec
 ## 
 
-### Which are the requirements to run this Dashboard?
+### Which are the requirements to run this demo?
 You need virtualbox or libvirt and vagrant installed.
 
 https://www.virtualbox.org/ or http://libvirt.org/
