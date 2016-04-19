@@ -36,7 +36,7 @@ Vagrant.configure(2) do |config|
     sudo -u postgres createdb -O ckan_default ckan_default -E utf-8
     sudo -u postgres createdb -O ckan_default datastore_default -E utf-8
     ckan db init
-    ckan datastore set-permissions | -u postgres psql --set ON_ERROR_STOP=1
+    ckan datastore set-permissions | sudo -u postgres psql --set ON_ERROR_STOP=1
     mkdir -p /var/lib/ckan/default
     chown www-data /var/lib/ckan/default
     chmod u+rwx /var/lib/ckan/default
