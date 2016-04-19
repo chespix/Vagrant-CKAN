@@ -14,6 +14,8 @@ Download this repo, and then, from a command line prompt inside the repo folder,
 #####**`$> vagrant up`**
 
 #### Connect to your fresh CKAN instance on http://192.168.33.10
+##### User: admin
+##### Pass: abc123
 
 
 # Enjoy
