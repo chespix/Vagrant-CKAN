@@ -47,5 +47,6 @@ Vagrant.configure(2) do |config|
     . /usr/lib/ckan/default/bin/activate
     cd /usr/lib/ckan/default/src/ckan
     expect -c 'spawn /usr/lib/ckan/default/bin/paster sysadmin add admin -c /etc/ckan/default/production.ini; expect -re ".*Create new user*"; sleep 3; send "y\r\n"; expect -re ".*Password*"; sleep 3; send "abc123\r\n";  expect -re ".*password*"; sleep 3; send "abc123\r\n"; expect -re "Added";'
+    sudo updatedb
   SHELL
 end
