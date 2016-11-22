@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :shell, inline: <<-SHELL
     apt-get update
-    apt-get install -y wget nginx apache2 libapache2-mod-wsgi libpq5 git
+    apt-get install -y wget nginx apache2 libapache2-mod-wsgi libpq5
     if [ ! -f "/vagrant/python-ckan_2.6-trusty_amd64.deb" ]; then
       cd /vagrant
       wget http://packaging.ckan.org/python-ckan_2.6-trusty_amd64.deb
